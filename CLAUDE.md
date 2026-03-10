@@ -30,3 +30,33 @@ Single-file FastAPI app (`hello.py`) with one endpoint:
 - `ResourcesResponse` — top-level with `topic: str` and `resources: Resources`
 
 The OpenAI client is initialized at module level from `OPENAI_API_KEY` env var (hard fails on startup if missing).
+
+## Git Workflow
+
+This repo is on GitHub: `https://github.com/nhossa/pathwaygen`
+
+**Commit on important changes** to preserve progress and prevent losing work:
+- After implementing a new feature
+- After fixing a bug
+- After significant refactoring
+- After making infrastructure/config changes
+
+**Common commit patterns:**
+```bash
+# After feature implementation
+git add .
+git commit -m "Add feature: description of what was added"
+
+# After bug fix
+git add .
+git commit -m "Fix: description of bug that was fixed"
+
+# After refactoring
+git add .
+git commit -m "Refactor: description of code changes"
+
+# Push to GitHub
+git push origin master
+```
+
+**Environment file:** `.env` is gitignored (never pushed). Each developer creates their own locally.
